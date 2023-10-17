@@ -23,13 +23,13 @@ dev_dependencies:
 flutter_native_splash:
     color: "#f7f6f1"
     color_dark: "#272727"
-    image: assets/images/rizkysaid_mask.jpeg
-    image_dark: assets/images/rizkysaid_mask.jpeg
+    image: assets/images/splash_images/rizkysaid_mask.jpeg
+    image_dark: assets/images/splash_images/rizkysaid_mask.jpeg
 
     android_12:
-      image: assets/images/rizkysaid_mask.jpeg
+      image: assets/images/splash_images/rizkysaid_mask.jpeg
       icon_background_color: "#f7f6f1"
-      image_dark: assets/images/rizkysaid_mask.jpeg
+      image_dark: assets/images/splash_images/rizkysaid_mask.jpeg
       icon_background_color_dark: "#272727"
 
 flutter:
@@ -37,8 +37,8 @@ flutter:
   uses-material-design: true
 
   assets:
-     - assets/images/rizkysaid_mask.jpeg
-     - assets/images/splash_top_icon.png
+     - assets/images/
+     - assets/images/splash_images/
 
 
 
