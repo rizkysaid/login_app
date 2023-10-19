@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:login_app/src/utils/theme/widget_themes/theme.dart';
+import 'package:login_app/src/utils/theme/widget_themes/elevated_button_theme.dart';
+import 'package:login_app/src/utils/theme/widget_themes/outlined_button_theme.dart';
+import 'package:login_app/src/utils/theme/widget_themes/text_theme.dart';
 
 class MyAppTheme{
 
@@ -9,12 +11,16 @@ class MyAppTheme{
     colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
     useMaterial3: true,
     brightness: Brightness.light,
-    textTheme: MyTextTheme.lightTextTheme
+    textTheme: MyTextTheme.lightTextTheme,
+    outlinedButtonTheme: MyOutlinedButtonTheme.lightOutlinedButtonTheme,
+    elevatedButtonTheme: MyElevatedButtonTheme.lightElevatedButtonTheme,
   );
 
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     useMaterial3: true,
-      textTheme: MyTextTheme.darkTextTheme
+    textTheme: MyTextTheme.darkTextTheme,
+    outlinedButtonTheme: MyOutlinedButtonTheme.darkOutlinedButtonTheme,
+    elevatedButtonTheme: MyElevatedButtonTheme.darkElevatedButtonTheme,
   );
 }

@@ -1,6 +1,8 @@
 // App Text Strings
+const String login = "Login";
+const String signup = "Signup";
 
-// Splash Screeen Text
+// Splash Screen Text
 const String appName = ".Login App";
 const String appTagLine = "All login with flutter";
 
@@ -18,5 +20,6 @@ const String onBoardingCounter2 = "2/3";
 const String onBoardingCounter3 = "3/3";
 
 
-
-
+// Welcome Screen Text
+const String welcomeTitle = "Build Awesome Apps";
+const String welcomeSubTitle = "Let's put your creativity";

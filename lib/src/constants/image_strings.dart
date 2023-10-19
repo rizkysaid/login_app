@@ -9,3 +9,6 @@ const String splashImage = "assets/images/splash_images/rizkysaid_mask.jpeg";
 const String onBoardingImage1 = "assets/images/on_boarding_images/flutter_logo.png";
 const String onBoardingImage2 = "assets/images/on_boarding_images/flutter_mascot.png";
 const String onBoardingImage3 = "assets/images/on_boarding_images/dart_side.jpg";
+
+// Welcome Screen Image
+const String welcomeScreenImage = "assets/images/welcome_images/flutter_welcome.png";
