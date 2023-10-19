@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:login_app/src/common_widgets/fade_in_animation/animation_design.dart';
+import 'package:login_app/src/common_widgets/fade_in_animation/fade_in_animation_controller.dart';
+import 'package:login_app/src/common_widgets/fade_in_animation/fade_in_animation_model.dart';
 import 'package:login_app/src/constants/colors.dart';
 import 'package:login_app/src/constants/image_strings.dart';
-import 'package:login_app/src/constants/sizes.dart';
 import 'package:login_app/src/constants/text_strings.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -9,41 +12,83 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(FadeInAnimationController());
+    controller.startAnimation();
+
     var mediaQuery = MediaQuery.of(context);
-    var height = mediaQuery.size.height;
+    var size = mediaQuery.size;
     var brightness = mediaQuery.platformBrightness;
     final isDarkMode = brightness == Brightness.dark;
     return Scaffold(
       backgroundColor: isDarkMode ? secondaryColor : primaryColor,
-      body: Padding(
-        padding: const EdgeInsets.all(defaultSize),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      body: Container(
+        padding: const EdgeInsets.all(10.0),
+        child: Stack(
+          alignment: Alignment.topCenter,
+
           children: [
-            Image(image: const AssetImage(welcomeScreenImage), height: (height * 0.5)),
-            Column(
-              children: [
-                Text(welcomeTitle, style: Theme.of(context).textTheme.headlineMedium),
-                Text(welcomeSubTitle, style: Theme.of(context).textTheme.bodyLarge),
-              ],
+            FadeInAnimation(
+              durationInMs: 1800,
+              animate: AnimatePosition(
+                bottomAfter: 0,
+                bottomBefore: -100,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Hero(
+                    tag: "welcome-image-tag",
+                    child: Image(
+                      image: const AssetImage(welcomeScreenImage),
+                      height: (size.height * 0.4),
+                    ),
+                  ),
+                  SizedBox(
+                    height: (size.height * 0.1),
+                  ),
+                  Column(
+                    children: [
+                      Text(welcomeTitle,
+                          style: Theme.of(context).textTheme.headlineMedium),
+                      Text(welcomeSubTitle,
+                          style: Theme.of(context).textTheme.bodyLarge),
+                    ],
+                  ),
+                  SizedBox(
+                    height: (size.height * 0.1),
+                  ),
+                  SizedBox(
+                    width: size.width * 0.95,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: OutlinedButton(
+                              onPressed: () {},
+                              child: Text(login.toUpperCase()),
+                            ),
+                          ),
+                          const SizedBox(
+                            width: 10.0,
+                          ),
+                          Expanded(
+                              child: ElevatedButton(
+                              onPressed: () {},
+                              child: Text(signup.toUpperCase()),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: (size.height * 0.05),
+                  ),
+                ],
+              ),
             ),
-            Row(
-              children: [
-                Expanded(
-                  child: OutlinedButton(
-                    onPressed: (){},
-                    child: Text(login.toUpperCase()),
-                  ),
-                ),
-                const SizedBox(width: 10.0,),
-                Expanded(
-                  child: ElevatedButton(
-                    onPressed: (){},
-                    child: Text(signup.toUpperCase()),
-                  ),
-                ),
-              ],
-            )
           ],
         ),
       ),

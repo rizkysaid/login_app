@@ -1,78 +1,92 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:login_app/src/common_widgets/fade_in_animation/animation_design.dart';
+import 'package:login_app/src/common_widgets/fade_in_animation/fade_in_animation_model.dart';
 import 'package:login_app/src/constants/image_strings.dart';
-import 'package:login_app/src/features/authentication/controllers/splash_screen_controller.dart';
+import 'package:login_app/src/common_widgets/fade_in_animation/fade_in_animation_controller.dart';
+import 'package:login_app/src/constants/sizes.dart';
 
 class SplashScreen extends StatelessWidget {
-  SplashScreen({super.key});
-
-  final splashScreenController = Get.put(SplashScreenController());
-  
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    
-    splashScreenController.startAnimation();
- 
+    final controller = Get.put(FadeInAnimationController());
+    controller.startSplashAnimation();
+
     return Scaffold(
       body: SafeArea(
-        child: Stack(
-          children: [
-            Obx( () => AnimatedPositioned(
-                  duration: const Duration(milliseconds: 1600),
-                  top: splashScreenController.animate.value ? 0 : -50,
-                  left: splashScreenController.animate.value ? 0 : -50,
-                  child: const Image(image: AssetImage(splashTopIcon), width: 150,)
+        child: Container(
+          padding: EdgeInsets.zero,
+          child: Stack(
+            alignment: Alignment.topCenter,
+            children: [
+              FadeInAnimation(
+                durationInMs: 1600,
+                animate: AnimatePosition(
+                  bottomAfter: 0,
+                  bottomBefore: 60,
+                  leftAfter: -30,
+                  leftBefore: 0,
+                ),
+                child: const Image(
+                  image: AssetImage(splashTopIcon),
+                ),
               ),
-            ),
-            Obx( () => AnimatedPositioned(
-                  duration: const Duration(milliseconds: 1600),
-                  top: 60,
-                  left: splashScreenController.animate.value ? 30 : -200,
-                  child: AnimatedOpacity(
-                    duration: const Duration(milliseconds: 1600),
-                    opacity: splashScreenController.animate.value ? 1 : 0,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text('.RizkySaid App/', style: Theme.of(context).textTheme.headlineMedium),
-                        Text('Aplikasi Login', style: Theme.of(context).textTheme.displaySmall),
-                        Text('With Flutter', style: Theme.of(context).textTheme.displaySmall),
-                      ],
-                    ),
-                  )
+              FadeInAnimation(
+                durationInMs: 1600,
+                animate: AnimatePosition(
+                  topBefore: 80,
+                  topAfter: 0,
+                  leftAfter: defaultSize,
+                  leftBefore: -80,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('.RizkySaid App/',
+                        style: Theme.of(context).textTheme.headlineMedium),
+                    Text('Aplikasi Login',
+                        style: Theme.of(context).textTheme.displaySmall),
+                    Text('With Flutter',
+                        style: Theme.of(context).textTheme.displaySmall),
+                  ],
+                ),
               ),
-            ),
-            Obx( () => AnimatedPositioned(
-                  duration: const Duration(milliseconds: 1600),
-                  bottom: splashScreenController.animate.value ? 30 : -100,
-                  left: 25,
-                  child: AnimatedOpacity(
-                    duration: const Duration(milliseconds: 1600),
-                    opacity: splashScreenController.animate.value ? 1 : 0,
-                    child: const Image(image: AssetImage(splashImage), width: 340,),
-                  )
+              FadeInAnimation(
+                durationInMs: 2400,
+                animate: AnimatePosition(
+                  bottomBefore: 0,
+                  bottomAfter: 100,
+                ),
+                child: const Center(
+                  child: Image(
+                    image: AssetImage(splashImage),
+                    width: 340,
+                  ),
+                ),
               ),
-            ),
-            Obx( () => AnimatedPositioned(
-                  duration: const Duration(milliseconds: 1600),
-                  bottom: 40,
-                  right: splashScreenController.animate.value ? 40 : -40,
-                  child: Container(
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(100),
-                      color: Colors.yellowAccent,
-                    ),
-                  )
+              FadeInAnimation(
+                durationInMs: 2400,
+                animate: AnimatePosition(
+                  bottomBefore: 0,
+                  bottomAfter: 60,
+                  rightBefore: defaultSize,
+                  rightAfter: 0,
+                ),
+                child: Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(100),
+                    color: Colors.yellowAccent,
+                  ),
+                ),
               ),
-            )
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
-
-
 }
