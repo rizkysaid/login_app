@@ -23,3 +23,17 @@ const String onBoardingCounter3 = "3/3";
 // Welcome Screen Text
 const String welcomeTitle = "Build Awesome Apps";
 const String welcomeSubTitle = "Let's put your creativity";
+
+
+// Login Screen Test
+const String loginTitle = "Welcome Back,";
+const String loginSubTitle = "Make it work, make it right, make it fast";
+const String rememberMe = "Remember Me?";
+const String dontHaveAnAccount = "Don't have an Account?";
+const String alreadyHaveAnAccount = "Already have an Account?";
+const String email = "E-Mail";
+const String password = "Password";
+const String forgetPassword = "Forget Password?";
+const String signInWithGoogle = "Sign-In with Google";
+
+

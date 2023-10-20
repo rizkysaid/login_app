@@ -6,6 +6,7 @@ import 'package:login_app/src/common_widgets/fade_in_animation/fade_in_animation
 import 'package:login_app/src/constants/colors.dart';
 import 'package:login_app/src/constants/image_strings.dart';
 import 'package:login_app/src/constants/text_strings.dart';
+import 'package:login_app/src/features/authentication/screens/login/login_screen.dart';
 import 'package:login_app/src/features/authentication/screens/on_boarding/on_boarding_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -68,7 +69,7 @@ class WelcomeScreen extends StatelessWidget {
                           Expanded(
                             child: OutlinedButton(
                               onPressed: () {
-                                Get.offAll(const OnBoardingScreen());
+                                Get.to(const LoginScreen());
                               },
                               child: Text(login.toUpperCase()),
                             ),

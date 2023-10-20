@@ -12,3 +12,6 @@ const String onBoardingImage3 = "assets/images/on_boarding_images/dart_side.jpg"
 
 // Welcome Screen Image
 const String welcomeScreenImage = "assets/images/welcome_images/flutter_welcome.png";
+
+// Login Image
+const String googleLogoImage = "assets/logo/google_logo.png";
