@@ -6,6 +6,7 @@ import 'package:login_app/src/common_widgets/fade_in_animation/fade_in_animation
 import 'package:login_app/src/constants/colors.dart';
 import 'package:login_app/src/constants/image_strings.dart';
 import 'package:login_app/src/constants/text_strings.dart';
+import 'package:login_app/src/features/authentication/screens/on_boarding/on_boarding_screen.dart';
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -66,7 +67,9 @@ class WelcomeScreen extends StatelessWidget {
                         children: [
                           Expanded(
                             child: OutlinedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.offAll(const OnBoardingScreen());
+                              },
                               child: Text(login.toUpperCase()),
                             ),
                           ),
@@ -75,7 +78,9 @@ class WelcomeScreen extends StatelessWidget {
                           ),
                           Expanded(
                               child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Get.offAll(const OnBoardingScreen());
+                              },
                               child: Text(signup.toUpperCase()),
                             ),
                           ),

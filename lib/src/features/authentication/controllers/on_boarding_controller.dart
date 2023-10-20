@@ -5,6 +5,7 @@ import 'package:login_app/src/constants/image_strings.dart';
 import 'package:login_app/src/constants/text_strings.dart';
 import 'package:login_app/src/features/authentication/models/model_on_boarding.dart';
 import 'package:login_app/src/features/authentication/screens/on_boarding/on_boarding_page_widget.dart';
+import 'package:login_app/src/features/authentication/screens/splash_screen/splash_screen.dart';
 
 class OnBoardingController extends GetxController{
   final controller = LiquidController();
@@ -48,7 +49,8 @@ class OnBoardingController extends GetxController{
   }
 
   skip(){
-    controller.jumpToPage(page: (pages.length-1));
+    // controller.jumpToPage(page: (pages.length-1));
+    Get.offAll(const SplashScreen());
   }
 
 }
