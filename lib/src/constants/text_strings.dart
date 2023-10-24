@@ -31,9 +31,25 @@ const String loginSubTitle = "Make it work, make it right, make it fast";
 const String rememberMe = "Remember Me?";
 const String dontHaveAnAccount = "Don't have an Account?";
 const String alreadyHaveAnAccount = "Already have an Account?";
+
 const String email = "E-Mail";
 const String password = "Password";
+const String phoneNo = "Phone No";
 const String forgetPassword = "Forget Password?";
 const String signInWithGoogle = "Sign-In with Google";
 
 
+// Forget Password Text
+const String forgetPasswordTitle = "Make Selection!";
+const String forgetPasswordSubTitle = "Select one of the options given below to reset your password.";
+const String resetViaEmail = "Reset Via E-Mail Verification.";
+const String resetViaPhone = "Reset Via Phone Verification.";
+
+// Forget Password Via Phone - Text
+const String forgetPhoneSubtitle = "Enter your registered Phone No to receive OTP";
+
+// Forget Password Via E-Mail - Text
+const String forgetEmailSubtitle = "Enter your registered E-Mail to receive OTP";
+
+
+const String next = "Next";
