@@ -57,3 +57,15 @@ const String next = "Next";
 const String otpTitle = "CO\nDE";
 const String otpSubtitle = "Verification";
 const String otpMessage = "Enter the verification code sent at ";
+
+
+// Dashboard Screen - Text
+const String dashboardTitle = "Hey, Welcome";
+const String dashboardHeading = "Explore Course";
+const String dashboardSearch = "Search...";
+const String dashboardBannerTitle1 = "Javascript";
+const String dashboardBannerTitle2 = "Flutter";
+const String dashboardBannerSubTitle = "9 Lessons";
+const String dashboardButton = "View All";
+const String dashboardTopCourses = "Top Courses";
+
