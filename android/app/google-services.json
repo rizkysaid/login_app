@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "23303115435",
+    "project_id": "flutter-login-app-8fdbb",
+    "storage_bucket": "flutter-login-app-8fdbb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23303115435:android:be7ba719a498a0ead09dee",
+        "android_client_info": {
+          "package_name": "my.id.rizkysaid.login_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApAlM0ZnyENmiDygRzKAXxQ97EBJB10qg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
