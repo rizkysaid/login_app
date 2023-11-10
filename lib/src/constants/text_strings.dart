@@ -29,15 +29,18 @@ const String welcomeSubTitle = "Let's put your creativity";
 const String loginTitle = "Welcome Back,";
 const String loginSubTitle = "Make it work, make it right, make it fast";
 const String rememberMe = "Remember Me?";
-const String dontHaveAnAccount = "Don't have an Account?";
-const String alreadyHaveAnAccount = "Already have an Account?";
-
+const String dontHaveAnAccount = "Don't have an Account? ";
 const String email = "E-Mail";
 const String password = "Password";
 const String phoneNo = "Phone No";
 const String forgetPassword = "Forget Password?";
 const String signInWithGoogle = "Sign-In with Google";
 
+// Sign Up Screen Text
+const String signUpTitle = "Get On Board";
+const String signUpSubTitle = "Create your profile to start your Journey with us...";
+const String alreadyHaveAnAccount = "Already have an Account? ";
+const String fullName = "Full Name";
 
 // Forget Password Text
 const String forgetPasswordTitle = "Make Selection!";

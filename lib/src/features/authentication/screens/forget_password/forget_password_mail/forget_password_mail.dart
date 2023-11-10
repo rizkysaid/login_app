@@ -4,7 +4,7 @@ import 'package:login_app/src/constants/image_strings.dart';
 import 'package:login_app/src/constants/sizes.dart';
 import 'package:login_app/src/constants/text_strings.dart';
 import 'package:login_app/src/features/authentication/screens/forget_password/forget_password_otp/otp_screen.dart';
-import 'package:login_app/src/features/authentication/screens/login/form_header_widget.dart';
+import 'package:login_app/src/common_widgets/form/form_header_widget.dart';
 
 class ForgetPasswordMailScreen extends StatelessWidget {
   const ForgetPasswordMailScreen({super.key});
