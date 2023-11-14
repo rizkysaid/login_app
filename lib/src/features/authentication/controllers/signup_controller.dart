@@ -13,8 +13,12 @@ class SignUpController extends GetxController{
 
     // Call this Function from Design & it will do the rest
     void registerUser(String email, String password){
+        String error = AuthenticationRepository.instance.createUserWithEmailAndPassword(email, password) as String;
+          Get.showSnackbar(GetSnackBar(message: error.toString()));
+      }
 
-        AuthenticationRepository.instance.createUserWithEmailAndPassword(email, password);
-
+//     Get phoneNo from user and pass it to Auth Repository for firebase Authentication
+    void phoneAuthentication(String phoneNo){
+        AuthenticationRepository.instance.phoneAuthentication(phoneNo);
     }
 }
