@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:login_app/src/constants/sizes.dart';
 import 'package:login_app/src/constants/text_strings.dart';
@@ -10,7 +11,8 @@ class OTPScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var otp;
+    var otpController = Get.put(OTPController());
+    late String otp;
     return Scaffold(
       body: SingleChildScrollView(
         child: Container(
@@ -45,7 +47,8 @@ class OTPScreen extends StatelessWidget {
                 filled: true,
                 onSubmit: (code){
                   otp = code;
-                  OTPController.instance.verifyOTP(otp);
+                  // OTPController.instance.verifyOTP(otp);
+                  otpController.verifyOTP(otp);
                 },
               ),
               const SizedBox(
@@ -55,7 +58,8 @@ class OTPScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                    OTPController.instance.verifyOTP(otp);
+                    // OTPController.instance.verifyOTP(otp);
+                    otpController.verifyOTP(otp);
                   },
                   child: const Text(next),
                 ),
