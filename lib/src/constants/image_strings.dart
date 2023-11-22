@@ -28,3 +28,6 @@ const String bannerImage3 = "assets/images/dashboard/flutter_banner_3.png";
 const String topCourseImage1 = "assets/images/dashboard/flutter_top_course_1.png";
 const String topCourseImage2 = "assets/images/dashboard/flutter_top_course_2.png";
 const String topCourseImage3 = "assets/images/dashboard/flutter_top_course_3.png";
+
+// Profile Images
+const String profileImage = "assets/images/profile/profile_pic.jpg";

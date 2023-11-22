@@ -61,7 +61,6 @@ const String otpTitle = "CO\nDE";
 const String otpSubtitle = "Verification";
 const String otpMessage = "Enter the verification code sent at ";
 
-
 // Dashboard Screen - Text
 const String dashboardTitle = "Hey, Welcome";
 const String dashboardHeading = "Explore Course";
@@ -71,4 +70,22 @@ const String dashboardBannerTitle2 = "Flutter";
 const String dashboardBannerSubTitle = "9 Lessons";
 const String dashboardButton = "View All";
 const String dashboardTopCourses = "Top Courses";
+
+// Profile Screen - Text
+const String profile = "Profile";
+const String editProfile = "Edit Profile";
+const String logoutDialogHeading = "Logout";
+const String profileHeading = "Rizky Said";
+const String profileSubHeading = "rizkysaid40@gmail.com";
+// -- Menu
+const String menu1 = "Settings";
+const String menu2 = "Information";
+const String menu3 = "Billing Details";
+const String menu4 = "User Management";
+const String menu5 = logoutDialogHeading;
+
+// Update Profile Screen - Text
+const String delete = "Delete";
+const String joined = "Joined";
+const String joinedAt = "09 July 2023";
 
