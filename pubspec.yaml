@@ -12,7 +12,7 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
-  flutter_native_splash: ^2.3.2
+  flutter_native_splash: ^2.3.6
   get: ^4.6.6
   liquid_swipe: ^3.1.0
   smooth_page_indicator: ^1.1.0
@@ -20,11 +20,12 @@ dependencies:
   firebase_core: ^2.21.0
   firebase_auth: ^4.13.0
   line_awesome_flutter: ^2.0.0
+  cloud_firestore: ^4.13.2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^2.0.0
+  flutter_lints: ^3.0.1
 
 flutter_native_splash:
     color: "#f7f6f1"
@@ -37,6 +38,7 @@ flutter_native_splash:
       icon_background_color: "#f7f6f1"
       image_dark: assets/images/on_boarding_images/flutter_mascot.png
       icon_background_color_dark: "#272727"
+    web: false
 
 flutter:
 

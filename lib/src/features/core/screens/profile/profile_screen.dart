@@ -7,6 +7,7 @@ import 'package:login_app/src/constants/sizes.dart';
 import 'package:login_app/src/constants/text_strings.dart';
 import 'package:login_app/src/features/core/screens/profile/update_profile_screen.dart';
 import 'package:login_app/src/features/core/screens/profile/widget/profile_menu.dart';
+import 'package:login_app/src/repository/authentication_repository/authentication_repository.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -21,7 +22,9 @@ class ProfileScreen extends StatelessWidget {
         title: Text(profile, style: Theme.of(context).textTheme.headlineSmall),
         actions: [
           IconButton(
-              onPressed: () {},
+              onPressed: () {
+                Get.back();
+              },
               icon: Icon(isDark ? LineAwesomeIcons.sun : LineAwesomeIcons.moon))
         ],
       ),
@@ -98,7 +101,9 @@ class ProfileScreen extends StatelessWidget {
                   icon: LineAwesomeIcons.alternate_sign_out,
                   textColor: Colors.red,
                   endIcon: false,
-                  onPress: (){},
+                  onPress: (){
+                    AuthenticationRepository.instance.logout();
+                  },
               ),
             ],
           ),

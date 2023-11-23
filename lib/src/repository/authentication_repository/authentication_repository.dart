@@ -22,8 +22,8 @@ class AuthenticationRepository extends GetxController {
   }
 
   _setInitialScreen(User? user) {
-    // user == null ? Get.offAll(() => const WelcomeScreen()) : Get
-    user == null ? Get.offAll(() => const ProfileScreen()) : Get
+    user == null ? Get.offAll(() => const WelcomeScreen()) : Get
+    // user == null ? Get.offAll(() => const ProfileScreen()) : Get
         .offAll(() => const Dashboard());
   }
 

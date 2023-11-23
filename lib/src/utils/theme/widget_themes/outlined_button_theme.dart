@@ -9,7 +9,9 @@ class MyOutlinedButtonTheme {
   // Light Theme
   static final lightOutlinedButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-        shape: const RoundedRectangleBorder(),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(100),
+        ),
         foregroundColor: darkColor,
         side: const BorderSide(color: darkColor),
         padding: const EdgeInsets.symmetric(vertical: buttonHeight)
@@ -19,7 +21,9 @@ class MyOutlinedButtonTheme {
   // Dark Theme
   static final darkOutlinedButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-        shape: const RoundedRectangleBorder(),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(100),
+        ),
         foregroundColor: whiteColor,
         side: const BorderSide(color: whiteColor),
         padding: const EdgeInsets.symmetric(vertical: buttonHeight)
