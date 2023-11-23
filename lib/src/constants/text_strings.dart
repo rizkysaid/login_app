@@ -86,6 +86,6 @@ const String menu5 = logoutDialogHeading;
 
 // Update Profile Screen - Text
 const String delete = "Delete";
-const String joined = "Joined";
+const String joined = "Joined ";
 const String joinedAt = "09 July 2023";
 

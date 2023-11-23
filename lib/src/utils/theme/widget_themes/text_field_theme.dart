@@ -5,12 +5,13 @@ class MyTextFormFieldTheme{
   MyTextFormFieldTheme._();
 
   static InputDecorationTheme lightInputDecorationTheme =
-      const InputDecorationTheme(
-        border: OutlineInputBorder(),
+      InputDecorationTheme(
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
         prefixIconColor: secondaryColor,
-        floatingLabelStyle: TextStyle(color: secondaryColor),
+        floatingLabelStyle: const TextStyle(color: secondaryColor),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(
+          borderRadius: BorderRadius.circular(100),
+          borderSide: const BorderSide(
             width: 2.0,
             color: secondaryColor,
           ),
@@ -18,12 +19,13 @@ class MyTextFormFieldTheme{
       );
 
    static InputDecorationTheme darkInputDecorationTheme =
-        const InputDecorationTheme(
-          border: OutlineInputBorder(),
+        InputDecorationTheme(
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(100)),
           prefixIconColor: primaryColor,
-          floatingLabelStyle: TextStyle(color: primaryColor),
+          floatingLabelStyle: const TextStyle(color: primaryColor),
           focusedBorder: OutlineInputBorder(
-            borderSide: BorderSide(
+            borderRadius: BorderRadius.circular(100),
+            borderSide: const BorderSide(
               width: 2.0,
               color: primaryColor,
             ),
