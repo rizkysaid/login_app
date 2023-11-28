@@ -12,7 +12,6 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
-  flutter_native_splash: ^2.3.6
   get: ^4.6.6
   liquid_swipe: ^3.1.0
   smooth_page_indicator: ^1.1.0
@@ -26,19 +25,74 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.1
+  flutter_native_splash: ^2.3.6
 
+#flutter_native_splash:
+#    color: "#f7f6f1"
+#    color_dark: "#272727"
+#    image: assets/images/on_boarding_images/flutter_mascot.png
+#    image_dark: assets/images/on_boarding_images/flutter_mascot.png
+#
+#    android_12:
+#      image: assets/images/on_boarding_images/flutter_mascot.png
+#      icon_background_color: "#f7f6f1"
+#      image_dark: assets/images/on_boarding_images/flutter_mascot.png
+#      icon_background_color_dark: "#272727"
+#    web: false
+
+
+
+# flutter_native_splash-development.yaml
 flutter_native_splash:
-    color: "#f7f6f1"
-    color_dark: "#272727"
-    image: assets/images/on_boarding_images/flutter_mascot.png
-    image_dark: assets/images/on_boarding_images/flutter_mascot.png
+  color: "#ffffff"
+  image: assets/images/on_boarding_images/flutter_mascot.png
+  branding: assets/images/on_boarding_images/flutter_mascot.png
+  color_dark: "#121212"
+  image_dark: assets/images/on_boarding_images/flutter_mascot.png
+  branding_dark: assets/images/on_boarding_images/flutter_mascot.png
 
-    android_12:
-      image: assets/images/on_boarding_images/flutter_mascot.png
-      icon_background_color: "#f7f6f1"
-      image_dark: assets/images/on_boarding_images/flutter_mascot.png
-      icon_background_color_dark: "#272727"
-    web: false
+  android_12:
+    image: assets/images/on_boarding_images/flutter_mascot.png
+    icon_background_color: "#ffffff"
+    image_dark: assets/images/on_boarding_images/flutter_mascot.png
+    icon_background_color_dark: "#121212"
+
+  web: false
+
+## flutter_native_splash-acceptance.yaml
+#flutter_native_splash:
+#  color: "#ffffff"
+#  image: assets/logo-acceptance.png
+#  branding: assets/branding-acceptance.png
+#  color_dark: "#121212"
+#  image_dark: assets/logo-acceptance.png
+#  branding_dark: assets/branding-acceptance.png
+#
+#  android_12:
+#    image: assets/logo-acceptance.png
+#    icon_background_color: "#ffffff"
+#    image_dark: assets/logo-acceptance.png
+#    icon_background_color_dark: "#121212"
+#
+#  web: false
+
+## flutter_native_splash-production.yaml
+#flutter_native_splash:
+#  color: "#ffffff"
+#  image: assets/logo-production.png
+#  branding: assets/branding-production.png
+#  color_dark: "#121212"
+#  image_dark: assets/logo-production.png
+#  branding_dark: assets/branding-production.png
+#
+#  android_12:
+#    image: assets/logo-production.png
+#    icon_background_color: "#ffffff"
+#    image_dark: assets/logo-production.png
+#    icon_background_color_dark: "#121212"
+#
+#  web: false
+
 
 flutter:
 
