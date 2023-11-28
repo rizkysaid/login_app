@@ -18,12 +18,14 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-            onPressed: () {}, icon: const Icon(LineAwesomeIcons.angle_left)),
+            onPressed: () {
+              Get.back();
+            }, icon: const Icon(LineAwesomeIcons.angle_left)),
         title: Text(profile, style: Theme.of(context).textTheme.headlineSmall),
         actions: [
           IconButton(
               onPressed: () {
-                Get.back();
+                // Get.back();
               },
               icon: Icon(isDark ? LineAwesomeIcons.sun : LineAwesomeIcons.moon))
         ],
