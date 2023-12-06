@@ -35,7 +35,6 @@ class UpdateProfileScreen extends StatelessWidget {
                 if(snapshot.hasData){
 
                   UserModel userData = snapshot.data as UserModel;
-
                   return Column(
                     children: [
                       Stack(
@@ -156,6 +155,7 @@ class UpdateProfileScreen extends StatelessWidget {
                       )
                     ],
                   );
+
                 }else if(snapshot.hasError){
                   return Center(child: Text(snapshot.error.toString()));
                 }else{
