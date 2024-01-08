@@ -7,6 +7,7 @@ import 'package:login_app/src/constants/sizes.dart';
 import 'package:login_app/src/constants/text_strings.dart';
 import 'package:login_app/src/features/core/screens/profile/update_profile_screen.dart';
 import 'package:login_app/src/features/core/screens/profile/widget/profile_menu.dart';
+import 'package:login_app/src/features/core/screens/user/user_list.dart';
 import 'package:login_app/src/repository/authentication_repository/authentication_repository.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -94,7 +95,9 @@ class ProfileScreen extends StatelessWidget {
               // MENU
               ProfileMenuWidget(title: "Settings", icon: LineAwesomeIcons.cog, onPress: (){}),
               ProfileMenuWidget(title: "Billing Details", icon: LineAwesomeIcons.wallet, onPress: (){}),
-              ProfileMenuWidget(title: "User Management", icon: LineAwesomeIcons.user_check, onPress: (){}),
+              ProfileMenuWidget(title: "User Management", icon: LineAwesomeIcons.user_check, onPress: (){
+                Get.to(() => const UserList());
+              }),
               const Divider(color: Colors.grey),
               const SizedBox(height: 10),
               ProfileMenuWidget(title: "Information", icon: LineAwesomeIcons.info, onPress: (){}),

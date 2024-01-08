@@ -17,7 +17,7 @@ class UserRepository extends GetxController {
   final _db = FirebaseFirestore.instance;
 
   /// Store user in FireStore
-  createUser(UserModel user) async {
+  Future<void> createUser(UserModel user) async {
     await _db.collection("Users")
         .add(user.toJson())
         .whenComplete(
@@ -54,5 +54,9 @@ class UserRepository extends GetxController {
     final snapshot = await _db.collection("Users").get();
     final userData = snapshot.docs.map((e) => UserModel.fromSnapShot(e)).toList();
     return userData;
+  }
+
+  Future<void> updateUserRecord(UserModel user) async {
+    await _db.collection("Users").doc(user.id).update(user.toJson());
   }
 }
